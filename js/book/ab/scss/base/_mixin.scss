@@ -1,0 +1,108 @@
+// レスポンシブSPのみに適用
+@mixin media_sp {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+// レスポンシブPCのみに適用
+@mixin media_pc{
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// レスポンシブ中間層のみに適用
+@mixin media_tab{
+    @media (min-width: 768px) and (max-width: 1000px) {
+        @content;
+    }
+}
+@mixin sprite-responsive($sprite){
+    $sheet-w    : nth($sprite, 7);
+    $sheet-h    : nth($sprite, 8);
+    $sprite-w   : nth($sprite, 5);
+    $sprite-h   : nth($sprite, 6);
+    $offset-x   : nth($sprite, 1);
+    $offset-y   : nth($sprite, 2);
+    $bg-path    : nth($sprite, 9);
+
+    background-image: url($bg-path);
+    background-size: ($sheet-w / $sprite-w * 100 + 0%) ($sheet-h / $sprite-h * 100+ 0%);
+    @if ($sheet-w - $sprite-w) == 0px {
+        background-position-x: 0;
+    } @else {
+        background-position-x: ($offset-x / ($sheet-w - $sprite-w) * 100 + 0%);
+    }
+    @if ($sheet-h - $sprite-h) == 0px {
+        background-position-y: 0;
+    } @else {
+        background-position-y: ($offset-y / ($sheet-h - $sprite-h) * 100 + 0%);
+    }
+
+    @include texthidden;
+
+    &:after{
+        content: '';
+        display: block;
+        padding-top: ($sprite-h / $sprite-w * 100 + 0%);
+    }
+}
+
+// 通常のボタン
+@mixin btn_normal($bgcolor:#000,$fontcolor:$fff,$fontsize:16px,$width:240px,$height:45px) {
+    @include flexcenter;
+    width: $width;
+    height: $height;
+    font-size: $fontsize;
+    font-family: $font_dosis;
+    color: $fontcolor;
+    line-height: 1;
+    background-color: $bgcolor;
+    border-radius: ($height / 2);
+}
+
+
+// position: absoluteの天地左右中央セット
+@mixin p-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+// position: absoluteの天地中央セット
+@mixin v-center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+// position: absoluteの左右中央セット
+@mixin a-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+// imgのフレキシブル指定
+@mixin flexibleimg {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+// デフォルトのtransition設定
+@mixin transition {
+    transition: .3s ease-out;
+}
+
+// テキストを隠す
+@mixin texthidden {
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}

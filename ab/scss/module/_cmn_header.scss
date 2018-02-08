@@ -1,0 +1,45 @@
+.g-header {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: #ffe100;
+	.logo {
+		width: 50px;
+		margin: 0 auto;
+		a {
+			display: flex;
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		width: 50px;
+		height: 50px;
+		cursor: pointer;
+		background: #222;
+
+		align-items: center;
+		justify-content: center;
+		span {
+			display: block;
+			width: 25px;
+			height: 2px;
+			background: #ffe100;
+			&:not(:first-child) {
+				margin-top: 3px;
+			}
+		}
+	}
+}

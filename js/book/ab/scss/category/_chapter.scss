@@ -1,0 +1,15 @@
+.page-top{
+    .pagelist-item{
+        ul{
+            padding-left: 1em;
+        }
+        li{
+            margin-top: 10px;
+            a{
+                &:before{
+                    content: "▶";
+                }
+            }
+        }
+    }
+}

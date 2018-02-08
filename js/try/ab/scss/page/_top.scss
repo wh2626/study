@@ -1,0 +1,10 @@
+.pagelist {
+	li {
+		font-size: 24px;
+		span {
+			&:after {
+				content: "：";
+			}
+		}
+	}
+}

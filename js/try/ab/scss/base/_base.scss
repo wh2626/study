@@ -1,0 +1,85 @@
+/* 游ゴシック体使用のため */
+@font-face {
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium"),
+       local("Yu Gothic");
+  font-weight: 500;
+}
+/* footer 要素が短い場合でもを最下部に入れる場合 */
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1;
+}
+/* /footer 要素が短い場合でもを最下部に入れる場合 */
+html {
+	font-size: 62.5%;
+	position: relative;
+	// min-height: 100%;/* footer 要素が短い場合でもを最下部に入れる場合は必要なし */
+}
+body {
+	font-family: $default-font-g;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+	color: $default-color;
+	background: #fff;
+
+	-webkit-text-size-adjust: 100%;
+	    -ms-text-size-adjust: 100%;
+	/*
+	導入検討
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: always;
+	font-feature-settings: "palt" 1;
+	font-kerning: auto;
+	text-rendering: optimizeLegibility;
+	*/
+
+}
+* {
+	box-sizing: border-box;
+}
+sub {
+	font-size: 12px;
+}
+sup {
+	font-size: 12px;
+}
+a {
+	outline: none;
+}
+p {
+	max-height: 100%;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	background: none;
+
+	        appearance: none;
+	-webkit-appearance: none;
+}
+input {
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	background: none;
+
+	        appearance: none;
+	-webkit-appearance: none;
+}

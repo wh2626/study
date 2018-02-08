@@ -1,0 +1,10 @@
+@include media_sp {
+    .pc {
+        display: none;
+    }
+}
+@include media_pc {
+    .sp {
+        display: none;
+    }
+}
