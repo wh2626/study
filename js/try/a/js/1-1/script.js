@@ -6,18 +6,18 @@ for(var i = 0;i<arr.length;i++){
     // arrの中の数値が2で割り切れたら、
     if(arr[i] % 2 === 0){
         // 何番目の数値が割り切れるかを#answer1-1の中に追記していく。
-        document.getElementById('answer1-1').appendChild(document.createTextNode(i+','));
+        document.querySelector('#answer1-1').appendChild(document.createTextNode(i+','));
     }
 
     // arrの中の数値が2で割り切れたら、
     if(arr[i] % 2 === 0){
         // その数字を#answer1-2の中に追記していく。
-        document.getElementById('answer1-2').appendChild(document.createTextNode(arr[i]+','));
+        document.querySelector('#answer1-2').appendChild(document.createTextNode(arr[i]+','));
     }
-    
+
     // arrの中の数値が3で割り切れたら、
     if(arr[i] % 3 === 0){
         // 何番目の数値が割り切れるかを#answer2-1の中に追記していく。
-        document.getElementById('answer2-1').appendChild(document.createTextNode(i+','));
+        document.querySelector('#answer2-1').appendChild(document.createTextNode(i+','));
     }
 }
