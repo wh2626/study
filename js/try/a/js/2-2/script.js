@@ -5,24 +5,20 @@ var idol = idolArr[Math.floor(Math.random() * idolArr.length)];
 document.querySelector('.idol').appendChild(document.createTextNode(idol));
 
 var kojo = '言いたいことがあるんだよ！やっぱり'+ idol +'は、かわいいよ！好き好き大好きやっぱ好き！俺が産まれてきた理由！それは'+ idol +'に出会う為！俺と一緒に人生歩もう世界で一番愛してる！愛してる！！！';
-var gachikoi
-for(var i = 0;i < oshi_list.length;i++){
-    if(idol === oshi_list[i]){
-        document.querySelector('.quotes').appendChild(document.createTextNode(kojo));
+var gachikoi;
+if(oshiCheck(idol, oshi_list)){
+    document.querySelector('.quotes').appendChild(document.createTextNode(kojo));
+}else{
+    document.querySelector('.quotes').appendChild(document.createTextNode('がんばれー！'));
+}
+
+function oshiCheck(val, arr) {
+    console.log(val);
+    console.log(arr);
+    var index = arr.indexOf(val);
+    if (index !== -1) {
+        return true;
+    } else {
+        return false;
     }
 }
-document.querySelector('.quotes').appendChild(document.createTextNode('がんばれー！'));
-// oshi_list.forEach(function(i){
-//     console.log(i);
-//     if(i === idol){
-//         gachikoi = true;
-//     }else{
-//         gachikoi = false;
-//     }
-// });
-//
-// if(gachikoi){
-//     document.querySelector('.quotes').appendChild(document.createTextNode(kojo));
-// }else{
-//     document.querySelector('.quotes').appendChild(document.createTextNode('おお〜'));
-// }
