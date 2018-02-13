@@ -894,4 +894,26 @@ input {
   .pagelist li span:after {
     content: "："; }
 
+.page_2-2 .result_wrap {
+  text-align: center; }
+
+.page_2-2 .idol_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .page_2-2 .idol_wrap .idol {
+    font-size: 60px;
+    line-height: 1; }
+
+.page_2-2 .me_wrap {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 100px; }
+
 /*# sourceMappingURL=maps/style.css.map */

@@ -1,0 +1,20 @@
+.page_2-2 {
+	.result_wrap {
+		text-align: center;
+	}
+	.idol_wrap {
+		display: flex;
+
+		justify-content: center;
+		align-items: flex-end;
+		.idol {
+			font-size: 60px;
+			line-height: 1;
+		}
+	}
+	.me_wrap {
+		width: 600px;
+		margin: 0 auto;
+		margin-top: 100px;
+	}
+}
