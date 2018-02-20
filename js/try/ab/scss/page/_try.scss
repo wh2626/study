@@ -1,3 +1,13 @@
+table {
+	border: 1px solid #ccc;
+}
+th {
+	border: 1px solid #ccc;
+}
+td {
+	border: 1px solid #ccc;
+}
+// page 2-2
 .page_2-2 {
 	.result_wrap {
 		text-align: center;
@@ -16,5 +26,40 @@
 		width: 600px;
 		margin: 0 auto;
 		margin-top: 100px;
+	}
+}
+
+.page_3-1 {
+	.get_text {
+		display: flex;
+
+		justify-content: center;
+	}
+	.sample {
+		margin-top: 50px;
+		table {
+			width: 100%;
+			thead{
+				th{
+					background: #333;
+					color: #fff;
+				}
+			}
+			tbody{
+				th{
+					background: #eee;
+				}
+			}
+			.item1 {
+				width: 35%;
+			}
+			.item2 {
+				width: 35%;
+			}
+		}
+	}
+	th,
+	td {
+		padding: 10px;
 	}
 }

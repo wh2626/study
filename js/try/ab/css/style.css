@@ -894,6 +894,15 @@ input {
   .pagelist li span:after {
     content: "："; }
 
+table {
+  border: 1px solid #ccc; }
+
+th {
+  border: 1px solid #ccc; }
+
+td {
+  border: 1px solid #ccc; }
+
 .page_2-2 .result_wrap {
   text-align: center; }
 
@@ -915,5 +924,31 @@ input {
   width: 600px;
   margin: 0 auto;
   margin-top: 100px; }
+
+.page_3-1 .get_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.page_3-1 .sample {
+  margin-top: 50px; }
+  .page_3-1 .sample table {
+    width: 100%; }
+    .page_3-1 .sample table thead th {
+      background: #333;
+      color: #fff; }
+    .page_3-1 .sample table tbody th {
+      background: #eee; }
+    .page_3-1 .sample table .item1 {
+      width: 35%; }
+    .page_3-1 .sample table .item2 {
+      width: 35%; }
+
+.page_3-1 th,
+.page_3-1 td {
+  padding: 10px; }
 
 /*# sourceMappingURL=maps/style.css.map */
